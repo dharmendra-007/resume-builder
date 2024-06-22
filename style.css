@@ -294,8 +294,10 @@ ul {
     padding: 10px;
   }
   .template-container {
-    padding: 10px;
-    gap: 10px;
+    padding: 20px 0;
+    gap: 5px;
+    width: calc(100% - 30px);
+    margin: 5px;
   }
 }
 
