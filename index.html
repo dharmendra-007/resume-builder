@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div id ="resumeForm">
+    <h2 class="main-title">Resume Builder</h2>
+    <!-- resume form -->
+    <div class ="container flex">
+      <div class="personalInfo">
+        <div class="personalInformation">
+          <h3 class = "sections">Personal Information</h3>
+          <div class="formGroup">
+            <label for="name">Name</label>
+            <input type="text" id ="name" placeholder="Ex: Dharmendra Mahanta">
+          </div>
+
+          <div class="formGroup">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="tel" id ="phoneNumber" placeholder="Ex : 9337XXXXXX" >
+          </div>
+
+          <div class="formGroup">
+            <label for="email">Email</label>
+            <input type="email" id ="email" placeholder="Ex : dharmendra@gmail.com" >
+          </div>
+
+          <div class="formGroup">
+            <label for="address">Address</label>
+            <textarea name="address" id="address" rows="4" placeholder="Ex : sector 12 , New Delhi" ></textarea>
+          </div>
+
+          <div class="formGroup">
+            <label for="age">Age</label>
+            <input type="number" id ="age" placeholder="Ex : 19" >
+          </div>
+
+          <div class="formGroup">
+            <label for="profilePicture">Profile Picture</label>
+            <input type="file" id ="profilePicture" accept="image/*" >
+          </div>
+
+          <div class="imagePreview">
+            <img id="profileImage" src="" alt="image Preview"/>
+          </div>
+        </div> 
+
+        <div class="importantLinks">
+          <h3 class="sections">Important Links</h3>
+
+          <div class="formGroup">
+            <label for="github">Github</label>
+            <input type="text" id ="github" placeholder="Ex: Dharmendra Mahanta" >
+          </div>
+          
+          <div class="formGroup">
+            <label for="linkedIn">Linked In</label>
+            <input type="text" id ="linkedIn" placeholder="Ex: Dharmendra Mahanta" >
+          </div>
+
+        </div>
+      </div>
+      <div class="professionalInfo">
+        <h3 class="sections">Education</h3>
+        <div id="education">
+          <div class="formGroup educations">
+            <div id ="eduJs"></div>
+            <input type="text" class ="education" placeholder="Ex: Intermediate with 92% " onkeydown=" if (event.key === 'Enter'){
+              addEdu();
+            }
+            ">
+          </div>
+          <div class="flex" id="save"></div>
+          <button class="addIcon" id ="edu" onClick="addEdu();"><i class="fa-regular fa-square-plus"></i></button>
+        </div>
+        
+        <h3 class="sections">Career Objective</h3>
+        <div class="careerObjective">
+          <div class="formGroup">
+            <textarea name="careerObjective" id="careerObjective" rows="4" placeholder="Ex: Aspiring Software Developer with a strong foundation in computer science and programming, seeking a position at a forward-thinking tech company. Eager to apply problem-solving skills, collaborate with a talented team, and contribute to innovative software solutions."></textarea>
+          </div>
+        </div>
+        
+        <h3 class="sections">Achivements</h3>
+        <div id="achivements">
+          <div class="formGroup">
+            <div id ="achivementJs"></div>
+            <input type="text" class ="achivements" placeholder="Ex: won hackathon " onkeydown=" if (event.key === 'Enter'){
+              addAchivement();
+            }
+            ">
+          </div>
+          <div class="flex" id="achivementSave"></div>
+          <button class="addIcon" id ="achivement" onclick="addAchivement();"><i class="fa-regular fa-square-plus"></i></button>
+        </div> 
+        <h3 class="sections">Projects</h3>
+        <div id="projects">
+          <div class="projectContent"></div>
+          <div class="editInput">
+            
+          </div>
+          <div class="formGroup">
+            <label for="title">Title</label>
+            <input type="text" class ="title" placeholder="Ex: Resume Builder ">
+            <label for="description">Description</label>
+            <textarea name="description" class ="description" rows="4" placeholder="Ex: description"></textarea>
+            <label for="link">Link</label>
+            <input type="text" class ="link" placeholder="Ex: link " onkeydown=" if (event.key === 'Enter'){
+              addProject();
+            }
+            ">
+          </div>
+          <button class="addIcon" id ="project" onclick="addProject();"><i class="fa-regular fa-square-plus"></i></button>
+        </div>
+    
+        
+      </div>
+    </div>
+    <button class="generate" onClick="generateResume();" type="submit"><span id ="generate">Generate</span></button>
+  </div>
+
+  <!-- resume template -->
+  <div class="template">
+  <div class="template-container flex">
+    <div class="left flex">
+      <div class="templateProfilePicture flex">
+        <img src="https://th.bing.com/th/id/OIP.0siT9Vkwx8tb_kFTi-KV1wHaHa?rs=1&pid=ImgDetMain" alt="profilePicture" class="imageT">
+      </div>
+        <div class="basicDetailsT">
+          <h4 class="nameT1">Dharmendra Mahanta</h4>
+          <p class="ageT">Age : 19</p>
+        </div>
+        <div class="contactT flex">
+          <h3 class="headT">Contact</h3>
+          <p class="phoneNoT">+91 9337XXXXXX</p>
+          <p class="emailT">dharmendra@gmail.com</p>
+          <p class="addressT">sector 12 , New Delhi</p>
+        </div>
+        <div class="importantLinksT flex">
+          <h3 class="headT">Important Links</h3>
+          <h5 style="text-decoration: underline;">GitHub</h5>
+          <p class="gitHubT">https://kit.fontawesome.com/1caf57d602.js</p>
+          <h5 style="text-decoration: underline;">Linked in</h5>
+          <p class="linkedInT">https://kit.fontawesome.com/1caf57d602.js</p>
+        </div>
+    </div>
+    <div class="right flex">
+      <h4 class="nameT2">Dharmendra Mahanta</h4>
+
+      <div class="objectiveT">
+        <h3 class="headT">Career Objective</h3>
+        <p class="cObjectiveT" >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem minima temporibus laudantium reiciendis, itaque perferendis et incidunt. Voluptas possimus exercitationem ipsum doloremque esse cum illo praesentium, laborum dolorem, veritatis quae.</p>
+      </div>
+
+      <div class="educationT">
+        <h3 class="headT">Academic Qualification</h3>
+        <ul class="educationListT">
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+        </ul>
+      </div>
+
+      <div class="achievementT">
+        <h3 class="headT">Achievements</h3>
+        <ul class="achievementListT">
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+        </ul>
+      </div>
+
+      <div class="projectT">
+        <h3 class="headT">Projects</h3>
+        <ul class="ProjectListT">
+          <li>
+            <h4>Lorem ipsum dolor sit amet.</h4>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio possimus ex quas accusamus minima natus perspiciatis veniam obcaecati animi quae.</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>  
+  <div class="print flex">
+    <button class="printBtn" type="button" onclick="printResume();"><p>Print</p></button>
+</div>
+  </div>
+  <script src="https://kit.fontawesome.com/1caf57d602.js" crossorigin="anonymous"></script>
+  <script src="scripts.js"></script>
+</body>
+</html>

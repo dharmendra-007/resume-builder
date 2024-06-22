@@ -1,0 +1,330 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  padding: 20px 40px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-title{
+  text-align: center;
+  margin-top: 15px;
+}
+
+.personalInfo,.professionalInfo{
+  width: 40vw ;
+}
+
+.sections{
+  text-align: center;
+  margin-block: 10px ;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px ;
+  margin-block: 10px;
+}
+
+input {
+  padding: 7px;
+}
+
+textarea {
+  padding: 7px;
+}
+
+#profilePicture{
+  padding: 0;
+}
+
+.addIcon{
+  width: 100%;
+  border: none;
+  font-size : 20px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.entries {
+  border: 1px solid #414141;
+  padding: 7px ;
+  margin-top: 7px;
+  background-color: #d9d7d7;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 15fr 1fr 1fr;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+}
+
+.edit,.delete {
+font-size: 1.05rem;
+cursor: pointer;
+}
+
+.titleJs, .descriptionJs, .linkJs {
+  border: 1px solid #414141;
+  padding: 7px ;
+  background-color: #d9d7d7;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 15fr 1fr 1fr;
+}
+
+.projHead{
+  margin-block: 7px;
+  font-weight:550;
+}
+
+.deleteProj{
+  justify-content: center;
+  margin-block: 7px;
+}
+
+#save , #achivementSave{
+  width: 100%;
+  justify-content: center;
+  padding: 7px;
+}
+
+.save {
+  font-size: 1.4rem;
+}
+
+.saveProject{
+  width: calc(100% - 50px);
+}
+
+.saveProjectBtn{
+  font-size: 1.5rem;
+  padding: 7px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.generate {
+  width: 100%;
+  border: none;
+  font-size : 18px;
+  font-weight:550;
+  letter-spacing: 4px;
+  background: transparent;
+  margin-top: 10px;
+  cursor: pointer;  
+}
+
+#generate{
+  background-color: green;
+  color: white;
+  padding: 10px 50px;
+}
+
+.template {
+  display: none;
+} 
+
+
+.grid {
+  display: grid;
+}
+
+.profilePicture {
+  width: 200px ;
+  border-radius: 50%;
+  border: 2px solid #414141;
+}
+
+#profileImage{
+  height: 100px;
+  width: 100px;
+  border: 1px solid #414141;
+}
+
+.template-container{
+  padding: 50px;
+  justify-content: space-evenly;
+  gap: 40px;
+}
+
+.templateProfilePicture{
+  justify-content: center;
+}
+
+.left , .basicDetailsT,.contactT ,.importantLinksT {
+  flex-direction: column;
+  gap: 2px;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.imageT{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 2px solid #414141;
+}
+
+.headT {
+  margin: 40px 0 10px 0;
+}
+
+.left {
+  background-color: rgb(93, 14, 93);
+  color: #ffffff;
+  padding: 20px;
+}
+
+.templateProfilePicture{
+  padding: 20px;
+}
+
+
+.right {
+  justify-content: center;
+  text-align: start;
+  flex-direction: column;
+  padding: 20px;
+  font-size: 1.5rem;
+  background-color: rgb(93, 14, 93);
+  color: #ffffff;
+}
+
+.headT{
+  background-color: aqua;
+  text-align: center;
+  color: #414141;
+}
+.nameT2{
+  font-size: 2rem;
+  text-align: center;
+}
+
+ul {
+  text-align: start;
+  padding: 20px;
+}
+
+.print{
+  justify-content: center;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.printBtn{
+  background-color: rgb(72, 175, 193);
+  color: rgb(255, 255, 255);
+  padding: 10px 50px;
+  border-radius: 8px;
+  font-size : 18px;
+  font-weight:550;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 768px) {
+  .container{
+    flex-direction: column;
+  }
+  .personalInfo , .professionalInfo {
+    width: 100%;
+  }
+  .template{
+    width: 100%;
+    word-wrap: break-word;
+
+  }
+  .template-container{
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .left {
+    overflow-wrap: break-word;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 40%;
+  }
+
+  .basicDetailsT ,.contactT,.importantLinksT {
+    font-size: 0.9rem;
+  }
+  
+  .right {
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+
+  .headT{
+    margin-top: 20px;
+  }
+
+  .imageT{
+    height: 150px;
+    width: 150px;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .imageT{
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@media print {
+  #resumeForm {
+    display: none;
+  } 
+  .left{
+    width: 40%;
+  }
+  .template-container{
+    padding: 5px;
+    justify-content: space-between;
+    gap: 40px;
+  }
+  .left {
+    padding: 20px;
+    overflow-wrap: break-word;
+    justify-content: flex-start;
+    padding: 70px 20px;
+    gap: 10px;
+  }
+
+  .basicDetailsT ,.contactT,.importantLinksT {
+    font-size: 1rem;
+  }
+  
+  .right {
+    padding: 20px;
+    font-size: 1rem;
+  }
+  
+  .headT{
+    margin-top: 20px;
+  }
+  
+  mageT{
+    height: 150px;
+    width: 150px;
+  }
+  .print{
+    display:none;
+  }
+}
