@@ -299,6 +299,10 @@ ul {
     width: calc(100% - 30px);
     margin: 5px;
   }
+
+  .entries{
+    column-gap: 18px;
+  }
 }
 
 @media print {
