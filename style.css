@@ -280,10 +280,22 @@ ul {
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 410px) {
   .imageT{
     height: 100px;
     width: 100px;
+  }
+
+  .left{
+    padding: 10px;
+  }
+
+  .right{
+    padding: 10px;
+  }
+  .template-container {
+    padding: 10px;
+    gap: 10px;
   }
 }
 
